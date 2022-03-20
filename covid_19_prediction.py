@@ -37,3 +37,15 @@ y_pred = classifier.predict(x_test)
 
 cm = confusion_matrix(y_test,y_pred)
 accuracy = accuracy_score(y_test, y_pred)
+
+#prediction using Logistic Regression
+from linear_model import LogisticRegression
+lm = LinearRegression()
+lm.fit(x_train, y_train)
+#check for intercept and coefficient
+lm.intercept_
+lm.coef_
+
+#predictions
+lm.predict(x_test)
+residuals = (y_test - predictions)
